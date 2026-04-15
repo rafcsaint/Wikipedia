@@ -1,4 +1,4 @@
-#Redesign de Artigo da Wikipedia em Glassmorphismo
+# Redesign de Artigo da Wikipedia em Glassmorphismo
 
 Este projeto é uma releitura visual e técnica do artigo da Wikipédia **[Antarctic English](https://en.wikipedia.org/wiki/Antarctic_English)**. O foco foi transformar a interface original da Wikipédia em uma experiência moderna utilizando a estética de **Glassmorphism** (Efeito Vidro (ou LiquidGlass).
 
@@ -46,6 +46,10 @@ O artigo documenta o desenvolvimento de um dialeto único na Antártida, incluin
 2.  Abra o arquivo `index.html` em seu navegador de preferência.
 
 ---
+
+## Vizualize o Projeto
+
+1. [Visualize a página ativa aqui](https://rafcsaint.github.io/Wikipedia/)
 
 ## Licença
 
