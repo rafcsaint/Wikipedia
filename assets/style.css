@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* ── Reset & Base ─────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F2F2F0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* ── Header & Navbar ──────────────────────────────────── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0 24px;
+  background: rgba(242, 242, 240, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+}
+
+/* ── Header & Navbar ──────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* linha de brilho no topo do header */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+}
+
+/* nav superior — logo + links de conta */
+header nav:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0 6px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  flex-wrap: wrap;
+}
+
+/* nav inferior — abas do artigo */
+header nav[aria-label="Article tabs"] {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 0 0;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  color: #3366cc;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+header nav a:hover {
+  background: rgba(255, 255, 255, 0.6);
+  text-decoration: underline;
+}
+
+/* separadores | entre links */
+header nav a + a::before {
+  content: '|';
+  margin-right: 4px;
+  color: #aaa;
+  pointer-events: none;
+}
+
+header p {
+  font-size: 12px;
+  color: #666;
+  padding: 4px 0 8px;
+}
+
+/* ── Layout principal ─────────────────────────────────── */
+main {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+/* ── Artigo ───────────────────────────────────────────── */
+article {
+  position: relative;
+}
+
+h1 {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+  margin: 28px 0 12px;
+  color: #222;
+}
+
+p {
+  margin-bottom: 14px;
+}
+
+/* ── Aside (infobox) ──────────────────────────────────── */
+aside {
+  float: right;
+  clear: right;
+  width: 260px;
+  margin: 0 0 20px 28px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  padding: 16px;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+
+aside::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+}
+
+aside::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+aside dl dt {
+  font-weight: 700;
+  margin-top: 10px;
+  color: #444;
+}
+
+aside dl dd {
+  margin-left: 12px;
+  color: #333;
+}
+
+aside ul, aside ol {
+  padding-left: 16px;
+  margin: 4px 0;
+}
+
+aside li {
+  margin: 2px 0;
+}
+
+/* ── Tabela ───────────────────────────────────────────── */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0 20px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+caption {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+th {
+  background: rgba(200, 200, 195, 0.4);
+  font-weight: 700;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+td {
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Referências ──────────────────────────────────────── */
+section ol, section ul {
+  padding-left: 22px;
+}
+
+section li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+sup a {
+  color: #3366cc;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+sup a:hover {
+  text-decoration: underline;
+}
+
+a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+cite {
+  font-style: italic;
+}
+
+dfn {
+  font-weight: 600;
+  font-style: normal;
+  color: #111;
+}
+
+/* ── Footer ───────────────────────────────────────────── */
+footer {
+  max-width: 960px;
+  margin: 40px auto 20px;
+  padding: 0 24px;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+
+footer p {
+  font-size: 12px;
+  color: #666;
+}
+
+/* ── Responsivo ───────────────────────────────────────── */
+@media (max-width: 640px) {
+  aside {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
